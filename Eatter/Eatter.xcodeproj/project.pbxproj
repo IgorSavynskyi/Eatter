@@ -27,6 +27,8 @@
 		3768145620B97DEC00C89AE7 /* UITextField+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3768145520B97DEC00C89AE7 /* UITextField+Additions.swift */; };
 		3768145820B97E7900C89AE7 /* UIButton+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3768145720B97E7900C89AE7 /* UIButton+Additions.swift */; };
 		3768145A20B9803300C89AE7 /* KeyboardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3768145920B9803300C89AE7 /* KeyboardProtocol.swift */; };
+		3768145D20B993FA00C89AE7 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3768145C20B993FA00C89AE7 /* LocationService.swift */; };
+		3768146D20B9A90C00C89AE7 /* LocationPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3768146C20B9A90C00C89AE7 /* LocationPermission.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,8 @@
 		3768145520B97DEC00C89AE7 /* UITextField+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Additions.swift"; sourceTree = "<group>"; };
 		3768145720B97E7900C89AE7 /* UIButton+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Additions.swift"; sourceTree = "<group>"; };
 		3768145920B9803300C89AE7 /* KeyboardProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardProtocol.swift; sourceTree = "<group>"; };
+		3768145C20B993FA00C89AE7 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		3768146C20B9A90C00C89AE7 /* LocationPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPermission.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -269,6 +273,7 @@
 		3768145120B9768100C89AE7 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				3768145B20B993E500C89AE7 /* LocationService */,
 				3768145220B9768900C89AE7 /* Validator */,
 			);
 			path = Services;
@@ -280,6 +285,15 @@
 				3768145320B976A600C89AE7 /* Validator.swift */,
 			);
 			path = Validator;
+			sourceTree = "<group>";
+		};
+		3768145B20B993E500C89AE7 /* LocationService */ = {
+			isa = PBXGroup;
+			children = (
+				3768145C20B993FA00C89AE7 /* LocationService.swift */,
+				3768146C20B9A90C00C89AE7 /* LocationPermission.swift */,
+			);
+			path = LocationService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -388,6 +402,7 @@
 				3768144320B957D100C89AE7 /* SearchViewInputOutput.swift in Sources */,
 				3768145820B97E7900C89AE7 /* UIButton+Additions.swift in Sources */,
 				3768145A20B9803300C89AE7 /* KeyboardProtocol.swift in Sources */,
+				3768146D20B9A90C00C89AE7 /* LocationPermission.swift in Sources */,
 				3768143220B9531900C89AE7 /* SearchCoordinator.swift in Sources */,
 				3768145420B976A600C89AE7 /* Validator.swift in Sources */,
 				3768145020B95B9400C89AE7 /* Storyboard.swift in Sources */,
@@ -398,6 +413,7 @@
 				3768143020B9529500C89AE7 /* Coordinator.swift in Sources */,
 				3768144820B959D800C89AE7 /* Fonts.swift in Sources */,
 				3768140820B9479E00C89AE7 /* AppDelegate.swift in Sources */,
+				3768145D20B993FA00C89AE7 /* LocationService.swift in Sources */,
 				3768144E20B95B7200C89AE7 /* ViewControllerFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

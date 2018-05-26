@@ -14,7 +14,7 @@ class SearchCoordinator {
         let presenter = SearchPresenter()
         let vc = ViewControllerFactory.makeSearchViewController(with: presenter)
         navigator.showNavigationBar(false)
-        navigator.navigate(to: vc, transition: .push)
+        navigator.navigate(to: vc, transition: .root)
     }
     
 }
@@ -25,8 +25,3 @@ extension SearchCoordinator: Coordinator {
     }
 }
 
-//extension LandingCoordinator: FeedModuleDelegate {
-//    func openUrl(_ url: URL) {
-//        navigator.navigate(to: .webPage(url), transition: .modal)
-//    }
-//}

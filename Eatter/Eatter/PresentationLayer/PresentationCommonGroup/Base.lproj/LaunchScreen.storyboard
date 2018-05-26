@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="A5D-i0-3yg">
-                                <rect key="frame" x="111.66666666666669" y="108" width="152" height="84"/>
+                                <rect key="frame" x="111.66666666666669" y="94" width="152" height="84"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EATTER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bHM-Ws-wTo">
                                         <rect key="frame" x="0.0" y="0.0" width="152" height="60.666666666666664"/>
@@ -40,7 +40,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="A5D-i0-3yg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="bhd-pf-OhC"/>
+                            <constraint firstItem="A5D-i0-3yg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="bhd-pf-OhC"/>
                             <constraint firstItem="A5D-i0-3yg" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="iZb-8H-fe0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

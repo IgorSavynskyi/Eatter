@@ -6,9 +6,10 @@ private extension Selector {
 
 class SearchViewController: UIViewController {
     private enum Settings {
-        static let shortAnimationDuration = 0.25
-        static let longAnimationDuration = 0.5
+        static let shortAnimationDuration: TimeInterval = 0.25
+        static let longAnimationDuration: TimeInterval = 0.5
         static let defaultCornerRadius: CGFloat = 4
+        static let infoPresentationDuration: TimeInterval = 4
     }
     
     // MARK: - Props
@@ -22,6 +23,7 @@ class SearchViewController: UIViewController {
     @IBOutlet weak private var searchInputContainerView: UIView!
     @IBOutlet weak private var searchHintLabel: UILabel!
     @IBOutlet weak private var searchField: UITextField!
+    @IBOutlet weak private var infoLabel: UILabel!
     private lazy var tapRecognizer = makeTapGestureRecognizer()
     
     @IBOutlet weak var searchButton: UIButton!
@@ -50,7 +52,6 @@ class SearchViewController: UIViewController {
     }
     
     // MARK: - Private API
-    
     private func updateSearchButtonState() {
         searchButton.isEnabled = isValidPostcode
         UIView.animate(withDuration: Settings.shortAnimationDuration) {
@@ -77,9 +78,7 @@ class SearchViewController: UIViewController {
         searchInputContainerView.backgroundColor = .fieldBackgroundColor
         searchInputContainerView.layer.cornerRadius = Settings.defaultCornerRadius
         
-        searchHintLabel
-            .font(.titleFont)
-            .textColor(.textColor)
+        applyStyle(font: .smallFont, textColor: .textColor, to: searchHintLabel, infoLabel)
         
         searchField
             .font(.titleFont)
@@ -102,14 +101,21 @@ class SearchViewController: UIViewController {
     
     // MARK: - Actions
     @IBAction private func pickLocationPostcodeAction(_ sender: Any) {
+        output.findLocationPostcodeAction()
     }
     
     @IBAction private func searchAction(_ sender: Any) {
+        output.didSearchAction(for: searchField.text)
     }
     
     @IBAction func searchFieldEditingChanged(_ sender: Any) {
-        print(#function)
         updateSearchButtonState()
+    }
+    
+    fileprivate func goToSettingsHandler(_ action: UIAlertAction) {
+        if let URL = URL(string: UIApplicationOpenSettingsURLString) {
+            UIApplication.shared.open(URL, options: [:], completionHandler: nil)
+        }
     }
 	
 }
@@ -121,7 +127,46 @@ extension SearchViewController: SearchViewInput {
         setupSearchViewStyle()
         updateSearchButtonState()
         searchView.alpha = 0
+        infoLabel.alpha = 0
     }
+    
+    func renderPostalCode(_ code: String?) {
+        searchField.text = code
+        updateSearchButtonState()
+    }
+    
+    func showEditLocationPermissionsAlert() {
+        let controller = UIAlertController(title: "Change location settings?",
+                                           message: "Eatter uses location to find takeaways close to you",
+                                           preferredStyle: .alert)
+        
+        let cancelAction = UIAlertAction(title: "Cancel",
+                                         style: .cancel,
+                                         handler: nil)
+        controller.addAction(cancelAction)
+        
+        let settingsAction = UIAlertAction(title: "Go to Settings",
+                                           style: .default,
+                                           handler: goToSettingsHandler)
+        controller.addAction(settingsAction)
+        
+        present(controller, animated: true, completion: nil)
+    }
+
+    func showCommonInfo(_ info: String) {
+        infoLabel.text = info
+        let processDuration = 0.2/Settings.infoPresentationDuration
+        UIView.animateKeyframes(withDuration: Settings.infoPresentationDuration, delay: 0, options: [], animations: {
+            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: processDuration, animations: {
+                self.infoLabel.alpha = 1.0
+            })
+            
+            UIView.addKeyframe(withRelativeStartTime: 1 - processDuration, relativeDuration: processDuration, animations: {
+                self.infoLabel.alpha = 0.0
+            })
+        }, completion: nil)
+    }
+    
 }
 
 extension SearchViewController: UITextFieldDelegate {

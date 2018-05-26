@@ -13,3 +13,8 @@ extension UILabel {
 
 }
 
+func applyStyle(font: UIFont, textColor: UIColor, to labels: UILabel...) {
+    labels.forEach { $0.font(font)
+                       .textColor(textColor)
+    }
+}
