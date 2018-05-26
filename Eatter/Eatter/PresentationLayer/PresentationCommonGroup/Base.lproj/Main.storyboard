@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uVk-Wc-8H4">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -10,25 +10,38 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="qQL-xF-C4l">
+            <objects>
+                <navigationController id="uVk-Wc-8H4" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7of-VA-Chh">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Dp-eo-FzT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-748" y="34"/>
+        </scene>
+        <!--Search View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Eatter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchViewController" id="BYZ-38-t0r" customClass="SearchViewController" customModule="Eatter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9ZS-4l-DSX">
-                                <rect key="frame" x="111" y="84" width="152" height="84"/>
+                                <rect key="frame" x="111.66666666666669" y="108" width="152" height="84"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EATTER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uuo-a1-Pyr">
-                                        <rect key="frame" x="0.0" y="0.0" width="152" height="60.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="152" height="60.666666666666664"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="44"/>
                                         <color key="textColor" name="appMainColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yours to eat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4aJ-tn-07o">
-                                        <rect key="frame" x="30.5" y="60.5" width="91.5" height="23.5"/>
+                                        <rect key="frame" x="30.333333333333336" y="60.666666666666664" width="91.333333333333314" height="23.333333333333336"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" name="appMainColor"/>
                                         <nil key="highlightedColor"/>
@@ -38,20 +51,109 @@
                                     <constraint firstAttribute="height" constant="84" id="h6j-ky-l8T"/>
                                 </constraints>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="uym-Q2-Qg8">
+                                <rect key="frame" x="37.666666666666657" y="224" width="300" height="128.33333333333337"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="xsd-pu-hOI">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="68.333333333333329"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search by postcode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Evf-5h-HNK">
+                                                <rect key="frame" x="0.0" y="0.0" width="152.66666666666666" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WYK-eQ-gFW">
+                                                <rect key="frame" x="0.0" y="24.333333333333343" width="300" height="44"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="927-7K-W0H">
+                                                        <rect key="frame" x="8" y="13.666666666666657" width="240" height="17"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no" returnKeyType="go" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="postal-code"/>
+                                                        <connections>
+                                                            <action selector="searchFieldEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="yyD-64-mAE"/>
+                                                            <outlet property="delegate" destination="BYZ-38-t0r" id="e7O-31-Tdb"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lZP-Ze-oBn">
+                                                        <rect key="frame" x="256" y="0.0" width="44" height="44"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="44" id="SvA-YB-6fg"/>
+                                                        </constraints>
+                                                        <state key="normal" image="navigationIcon"/>
+                                                        <connections>
+                                                            <action selector="pickLocationPostcodeAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0wG-9u-AYa"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="lZP-Ze-oBn" secondAttribute="trailing" id="148-Sl-4NN"/>
+                                                    <constraint firstItem="lZP-Ze-oBn" firstAttribute="leading" secondItem="927-7K-W0H" secondAttribute="trailing" constant="8" id="FeW-rc-E3b"/>
+                                                    <constraint firstAttribute="height" constant="44" id="I9b-Vs-pAk"/>
+                                                    <constraint firstItem="lZP-Ze-oBn" firstAttribute="top" secondItem="WYK-eQ-gFW" secondAttribute="top" id="KC9-5k-peo"/>
+                                                    <constraint firstItem="927-7K-W0H" firstAttribute="leading" secondItem="WYK-eQ-gFW" secondAttribute="leading" constant="8" id="Omq-kU-rec"/>
+                                                    <constraint firstAttribute="bottom" secondItem="lZP-Ze-oBn" secondAttribute="bottom" id="VY7-eQ-dfd"/>
+                                                    <constraint firstItem="927-7K-W0H" firstAttribute="centerY" secondItem="WYK-eQ-gFW" secondAttribute="centerY" id="oCO-dz-dFD"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="WYK-eQ-gFW" secondAttribute="trailing" id="eK9-ai-dBI"/>
+                                        </constraints>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BMd-0H-C4I">
+                                        <rect key="frame" x="0.0" y="84.333333333333314" width="300" height="44"/>
+                                        <color key="backgroundColor" name="appMainColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="F67-ZD-XwP"/>
+                                        </constraints>
+                                        <state key="normal" title="Search">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="searchAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dNd-q8-osw"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="Ujn-wR-Kp1"/>
+                                    <constraint firstItem="BMd-0H-C4I" firstAttribute="width" secondItem="uym-Q2-Qg8" secondAttribute="width" id="lxW-Z1-Lry"/>
+                                    <constraint firstItem="xsd-pu-hOI" firstAttribute="width" secondItem="uym-Q2-Qg8" secondAttribute="width" id="nfj-s4-AZ7"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="uym-Q2-Qg8" firstAttribute="top" secondItem="9ZS-4l-DSX" secondAttribute="bottom" constant="32" id="7Wg-dq-MP1"/>
                             <constraint firstItem="9ZS-4l-DSX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="Lpi-g3-B0S"/>
+                            <constraint firstItem="uym-Q2-Qg8" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="gyp-CU-JXd"/>
                             <constraint firstItem="9ZS-4l-DSX" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="hKT-Kd-3ek"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="logoLabel" destination="uuo-a1-Pyr" id="oN4-rb-3om"/>
+                        <outlet property="searchButton" destination="BMd-0H-C4I" id="Jit-0h-aZ4"/>
+                        <outlet property="searchField" destination="927-7K-W0H" id="pbr-0Q-MQw"/>
+                        <outlet property="searchHintLabel" destination="Evf-5h-HNK" id="wS9-5e-Bm6"/>
+                        <outlet property="searchInputContainerView" destination="WYK-eQ-gFW" id="woo-SU-AgL"/>
+                        <outlet property="searchView" destination="uym-Q2-Qg8" id="sND-fU-Lh4"/>
+                        <outlet property="sloganLabel" destination="4aJ-tn-07o" id="ELi-A1-7yd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="33.733133433283363"/>
         </scene>
     </scenes>
     <resources>
+        <image name="navigationIcon" width="20" height="20"/>
+        <namedColor name="appMainColor">
+            <color red="0.96899998188018799" green="0.054999999701976776" blue="0.19599999487400055" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="appMainColor">
             <color red="0.96899998190000003" green="0.054999999700000003" blue="0.1959999949" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
