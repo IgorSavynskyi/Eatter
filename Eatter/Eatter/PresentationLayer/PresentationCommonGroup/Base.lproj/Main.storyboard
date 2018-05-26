@@ -159,6 +159,22 @@
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="33.733133433283363"/>
         </scene>
+        <!--Restaurants-->
+        <scene sceneID="8SD-w1-aKM">
+            <objects>
+                <viewController storyboardIdentifier="ResultsViewController" title="Restaurants" id="ple-qb-wcV" customClass="ResultsViewController" customModule="Eatter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JNv-V2-JXs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="kTx-1d-OrH"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nbS-tk-t6s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="857" y="34"/>
+        </scene>
     </scenes>
     <resources>
         <image name="navigationIcon" width="20" height="20"/>

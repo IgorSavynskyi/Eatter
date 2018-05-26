@@ -29,7 +29,6 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var searchButton: UIButton!
     var isValidPostcode: Bool { return Validator.isValidPostCode(searchField.text) }
     
-    
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +38,7 @@ class SearchViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         addKeyboardObserver()
+        navigationController?.isNavigationBarHidden = true
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -60,7 +60,7 @@ class SearchViewController: UIViewController {
     }
     
     private func fireAppearance() {
-        self.searchField.becomeFirstResponder()
+        searchField.becomeFirstResponder()
         UIView.animate(withDuration: Settings.longAnimationDuration) {
             self.searchView.alpha = 1
         }

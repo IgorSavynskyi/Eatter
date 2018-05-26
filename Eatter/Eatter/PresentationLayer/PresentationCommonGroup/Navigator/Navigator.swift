@@ -22,9 +22,5 @@ class Navigator {
             navigationController.present(destination, animated: true, completion: nil)
         }
     }
-
-    func showNavigationBar(_ value: Bool) {
-        navigationController.isNavigationBarHidden = !value
-    }
     
 }

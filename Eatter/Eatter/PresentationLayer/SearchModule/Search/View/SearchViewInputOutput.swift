@@ -1,4 +1,4 @@
-protocol SearchViewInput: class {
+protocol SearchViewInput: class, AlertPresentable {
     func setupInitialState()
     func renderPostalCode(_ code: String?)
     func showEditLocationPermissionsAlert()
