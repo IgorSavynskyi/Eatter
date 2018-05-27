@@ -37,7 +37,6 @@ class EatterNetworkingTests: XCTestCase {
         waitForExpectations(timeout: 10, handler: nil)
     }
     
-    
     func testInvalidPostcodeFetching() {
         let params = RestaurantsRequestParams(code: "!@$$%ˆˆ%26%26*")
         let promise = expectation(description: "Completion handler invoked")
@@ -60,7 +59,7 @@ class EatterNetworkingTests: XCTestCase {
         XCTAssertNotNil(responseError)
     }
     
-    // Performance
+    // MARK: - Performance
     func testDownloadImagePerformance() {
         measure {
             guard let largeImageUrl = URL(string: "https://i.redd.it/q9rhs4bx52011.jpg") else { return }

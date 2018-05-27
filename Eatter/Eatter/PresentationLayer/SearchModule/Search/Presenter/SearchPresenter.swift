@@ -48,6 +48,4 @@ extension SearchPresenter: SearchViewOutput {
         }
     }
 
-    
-
 }

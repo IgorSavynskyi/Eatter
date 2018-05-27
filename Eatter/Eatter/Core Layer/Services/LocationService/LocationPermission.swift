@@ -38,6 +38,10 @@ class LocationPermission: NSObject {
 
 extension LocationPermission: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if status == .notDetermined {
+            locationManager.requestWhenInUseAuthorization()
+            return
+        }
         authorizationCallbacks.forEach { $0(status) }
         authorizationCallbacks.removeAll()
     }
