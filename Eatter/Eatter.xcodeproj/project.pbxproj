@@ -11,6 +11,7 @@
 		3716F57D20BA8CEF008BA3EA /* UIView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3716F57C20BA8CEF008BA3EA /* UIView+Additions.swift */; };
 		3716F57F20BA8FFB008BA3EA /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3716F57E20BA8FFB008BA3EA /* ReusableView.swift */; };
 		3716F58220BA9978008BA3EA /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3716F58120BA9978008BA3EA /* ImageDownloader.swift */; };
+		3716F58620BAB62E008BA3EA /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3716F58520BAB62E008BA3EA /* ImageCache.swift */; };
 		3768140820B9479E00C89AE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3768140720B9479E00C89AE7 /* AppDelegate.swift */; };
 		3768140D20B9479E00C89AE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3768140B20B9479E00C89AE7 /* Main.storyboard */; };
 		3768140F20B9479F00C89AE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3768140E20B9479F00C89AE7 /* Assets.xcassets */; };
@@ -72,6 +73,7 @@
 		3716F57C20BA8CEF008BA3EA /* UIView+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Additions.swift"; sourceTree = "<group>"; };
 		3716F57E20BA8FFB008BA3EA /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		3716F58120BA9978008BA3EA /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		3716F58520BAB62E008BA3EA /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		3768140420B9479E00C89AE7 /* Eatter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eatter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3768140720B9479E00C89AE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3768140C20B9479E00C89AE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				3716F58120BA9978008BA3EA /* ImageDownloader.swift */,
+				3716F58520BAB62E008BA3EA /* ImageCache.swift */,
 			);
 			path = ImageDownloader;
 			sourceTree = "<group>";
@@ -625,6 +628,7 @@
 				3716F57F20BA8FFB008BA3EA /* ReusableView.swift in Sources */,
 				3768143B20B9550E00C89AE7 /* Navigator.swift in Sources */,
 				3768149E20B9CFA400C89AE7 /* Commons.swift in Sources */,
+				3716F58620BAB62E008BA3EA /* ImageCache.swift in Sources */,
 				376814BC20B9E69000C89AE7 /* ResultsPresenter.swift in Sources */,
 				3768143F20B9572900C89AE7 /* SearchPresenter.swift in Sources */,
 				3768143020B9529500C89AE7 /* Coordinator.swift in Sources */,

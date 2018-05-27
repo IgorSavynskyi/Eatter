@@ -14,11 +14,17 @@ class ImageDownloader {
     func downloadImage(from url: URL, completion: @escaping DownloadCompletion) {
         self.completion = completion
         
+        if let image = ImageCache.shared[url] {
+            completion(.success(image))
+            return
+        }
+        
         currentTask = session.dataTask(with: url, completionHandler: { (data, response, error) in
             AppService.shared.showNetworkActivity = false
             if error == nil {
                 if let data = data, let image = UIImage(data: data) {
                     completion(.success(image))
+                    ImageCache.shared[url] = image
                 } else {
                     completion(.failure(NetworkError.common("Image failed to decode")))
                 }
