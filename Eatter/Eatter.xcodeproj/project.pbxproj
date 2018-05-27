@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3716F57B20BA8BA7008BA3EA /* PlaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3716F57A20BA8BA7008BA3EA /* PlaceCell.swift */; };
+		3716F57D20BA8CEF008BA3EA /* UIView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3716F57C20BA8CEF008BA3EA /* UIView+Additions.swift */; };
+		3716F57F20BA8FFB008BA3EA /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3716F57E20BA8FFB008BA3EA /* ReusableView.swift */; };
+		3716F58220BA9978008BA3EA /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3716F58120BA9978008BA3EA /* ImageDownloader.swift */; };
 		3768140820B9479E00C89AE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3768140720B9479E00C89AE7 /* AppDelegate.swift */; };
 		3768140D20B9479E00C89AE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3768140B20B9479E00C89AE7 /* Main.storyboard */; };
 		3768140F20B9479F00C89AE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3768140E20B9479F00C89AE7 /* Assets.xcassets */; };
@@ -64,6 +68,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3716F57A20BA8BA7008BA3EA /* PlaceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCell.swift; sourceTree = "<group>"; };
+		3716F57C20BA8CEF008BA3EA /* UIView+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Additions.swift"; sourceTree = "<group>"; };
+		3716F57E20BA8FFB008BA3EA /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		3716F58120BA9978008BA3EA /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		3768140420B9479E00C89AE7 /* Eatter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eatter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3768140720B9479E00C89AE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3768140C20B9479E00C89AE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -132,6 +140,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3716F57920BA8B7C008BA3EA /* PlaceCell */ = {
+			isa = PBXGroup;
+			children = (
+				3716F57A20BA8BA7008BA3EA /* PlaceCell.swift */,
+			);
+			path = PlaceCell;
+			sourceTree = "<group>";
+		};
+		3716F58020BA9965008BA3EA /* ImageDownloader */ = {
+			isa = PBXGroup;
+			children = (
+				3716F58120BA9978008BA3EA /* ImageDownloader.swift */,
+			);
+			path = ImageDownloader;
+			sourceTree = "<group>";
+		};
 		376813FB20B9479E00C89AE7 = {
 			isa = PBXGroup;
 			children = (
@@ -226,6 +250,7 @@
 				3768145920B9803300C89AE7 /* KeyboardProtocol.swift */,
 				376814B120B9D83B00C89AE7 /* JSONSerializable.swift */,
 				376814B520B9E5BF00C89AE7 /* AlertPresentable.swift */,
+				3716F57E20BA8FFB008BA3EA /* ReusableView.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -310,6 +335,7 @@
 				3768145720B97E7900C89AE7 /* UIButton+Additions.swift */,
 				376814A820B9D0D800C89AE7 /* String+Additions.swift */,
 				376814AA20B9D11B00C89AE7 /* Dictionary+Additions.swift */,
+				3716F57C20BA8CEF008BA3EA /* UIView+Additions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -326,6 +352,7 @@
 		3768145120B9768100C89AE7 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				3716F58020BA9965008BA3EA /* ImageDownloader */,
 				376814AC20B9D16600C89AE7 /* AppService */,
 				3768146E20B9CE7900C89AE7 /* RestaurantsService */,
 				3768145B20B993E500C89AE7 /* LocationService */,
@@ -438,6 +465,7 @@
 			children = (
 				376814B920B9E66F00C89AE7 /* ResultsViewController.swift */,
 				376814BD20B9E6DE00C89AE7 /* ResultsViewInputOutput.swift */,
+				3716F57920BA8B7C008BA3EA /* PlaceCell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -567,17 +595,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3716F57B20BA8BA7008BA3EA /* PlaceCell.swift in Sources */,
 				3768144120B9577500C89AE7 /* SearchViewController.swift in Sources */,
 				376814A720B9CFA400C89AE7 /* NetworkError.swift in Sources */,
 				3768144620B959A200C89AE7 /* Colors.swift in Sources */,
 				3768144320B957D100C89AE7 /* SearchViewInputOutput.swift in Sources */,
 				3768145820B97E7900C89AE7 /* UIButton+Additions.swift in Sources */,
+				3716F58220BA9978008BA3EA /* ImageDownloader.swift in Sources */,
 				3768145A20B9803300C89AE7 /* KeyboardProtocol.swift in Sources */,
 				376814A320B9CFA400C89AE7 /* NetworkService.swift in Sources */,
 				3768146D20B9A90C00C89AE7 /* LocationPermission.swift in Sources */,
 				3768143220B9531900C89AE7 /* SearchCoordinator.swift in Sources */,
 				3768149F20B9CFA400C89AE7 /* ServerConfig.swift in Sources */,
 				376814B620B9E5BF00C89AE7 /* AlertPresentable.swift in Sources */,
+				3716F57D20BA8CEF008BA3EA /* UIView+Additions.swift in Sources */,
 				3768145420B976A600C89AE7 /* Validator.swift in Sources */,
 				376814AB20B9D11B00C89AE7 /* Dictionary+Additions.swift in Sources */,
 				376814A020B9CFA400C89AE7 /* ServerResponse.swift in Sources */,
@@ -591,6 +622,7 @@
 				376814A120B9CFA400C89AE7 /* RestaurantResponseItem.swift in Sources */,
 				376814A520B9CFA400C89AE7 /* Request.swift in Sources */,
 				376814B020B9D80C00C89AE7 /* RestaurantsRequestParams.swift in Sources */,
+				3716F57F20BA8FFB008BA3EA /* ReusableView.swift in Sources */,
 				3768143B20B9550E00C89AE7 /* Navigator.swift in Sources */,
 				3768149E20B9CFA400C89AE7 /* Commons.swift in Sources */,
 				376814BC20B9E69000C89AE7 /* ResultsPresenter.swift in Sources */,

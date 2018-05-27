@@ -13,6 +13,9 @@ extension AlertPresentable where Self: UIViewController {
         alertController.addAction(UIAlertAction(title: "Ok",
                                                 style: UIAlertActionStyle.default,
                                                 handler: nil))
-        present(alertController, animated: true, completion: nil)
+        
+        DispatchQueue.main.async {
+            self.present(alertController, animated: true, completion: nil)
+        }
     }
 }

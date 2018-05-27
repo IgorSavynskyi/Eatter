@@ -8,4 +8,5 @@ enum NetworkError: Error {
     case networkRequestError(_: Int, description: String)
     case missingHTTPResponse
     case swiftError(String)
+    case common(String?)
 }
