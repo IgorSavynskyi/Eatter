@@ -12,6 +12,7 @@
 		3716F57F20BA8FFB008BA3EA /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3716F57E20BA8FFB008BA3EA /* ReusableView.swift */; };
 		3716F58220BA9978008BA3EA /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3716F58120BA9978008BA3EA /* ImageDownloader.swift */; };
 		3716F58620BAB62E008BA3EA /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3716F58520BAB62E008BA3EA /* ImageCache.swift */; };
+		3716F58A20BAC527008BA3EA /* EatterNetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3716F58920BAC527008BA3EA /* EatterNetworkingTests.swift */; };
 		3768140820B9479E00C89AE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3768140720B9479E00C89AE7 /* AppDelegate.swift */; };
 		3768140D20B9479E00C89AE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3768140B20B9479E00C89AE7 /* Main.storyboard */; };
 		3768140F20B9479F00C89AE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3768140E20B9479F00C89AE7 /* Assets.xcassets */; };
@@ -74,6 +75,7 @@
 		3716F57E20BA8FFB008BA3EA /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		3716F58120BA9978008BA3EA /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		3716F58520BAB62E008BA3EA /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		3716F58920BAC527008BA3EA /* EatterNetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EatterNetworkingTests.swift; sourceTree = "<group>"; };
 		3768140420B9479E00C89AE7 /* Eatter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eatter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3768140720B9479E00C89AE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3768140C20B9479E00C89AE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 		3768141B20B9479F00C89AE7 /* EatterTests */ = {
 			isa = PBXGroup;
 			children = (
+				3716F58920BAC527008BA3EA /* EatterNetworkingTests.swift */,
 				3768141C20B9479F00C89AE7 /* EatterTests.swift */,
 				3768141E20B9479F00C89AE7 /* Info.plist */,
 			);
@@ -650,6 +653,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3716F58A20BAC527008BA3EA /* EatterNetworkingTests.swift in Sources */,
 				3768141D20B9479F00C89AE7 /* EatterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -803,7 +807,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4PR4N2FLE7;
+				DEVELOPMENT_TEAM = EAGAM5LW4V;
 				INFOPLIST_FILE = Eatter/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -822,7 +826,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4PR4N2FLE7;
+				DEVELOPMENT_TEAM = EAGAM5LW4V;
 				INFOPLIST_FILE = Eatter/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
